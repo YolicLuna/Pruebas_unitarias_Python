@@ -1,0 +1,22 @@
+>>> from archivos_externos import palindromo_2, User
+
+>>> palindromo_2('Anita lava la tina')
+True
+
+>>> palindromo_2('Codigo Facilito')
+False
+
+>>> sentence = 'Oso'
+>>> palindromo_2(sentence)
+True
+
+>>> username = 'Eduardo'
+>>> password = 'password123'
+
+>>> user = User(username, password)
+
+>>> user.username == username
+True
+
+>>> user.password == password
+True

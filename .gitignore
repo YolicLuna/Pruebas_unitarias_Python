@@ -1,0 +1,230 @@
+# ============================================================
+# SISTEMA OPERATIVO
+# ============================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+
+# ============================================================
+# EDITORES E IDEs
+# ============================================================
+
+# VS Code
+.vscode/
+!.vscode/settings.json      # puedes versionar configuración compartida
+!.vscode/extensions.json
+
+# JetBrains (IntelliJ, WebStorm, PyCharm, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+Session.vim
+
+# Emacs
+*~
+\#*\#
+.emacs.desktop
+
+# Sublime Text
+*.sublime-workspace
+
+
+# ============================================================
+# LENGUAJES Y RUNTIMES
+# ============================================================
+
+## Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm
+.yarn/cache
+.pnp.*
+
+## Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+*.coverage
+htmlcov/
+
+## Java / Kotlin
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+target/
+.mvn/
+hs_err_pid*
+
+## Go
+*.exe
+*.exe~
+*.test
+*.out
+vendor/
+
+## Rust
+target/
+Cargo.lock      # omitir solo en librerías, NO en binarios
+
+## Ruby
+*.gem
+.bundle/
+vendor/bundle/
+Gemfile.lock    # omitir solo si es librería
+
+## PHP (Composer)
+vendor/
+composer.phar
+
+## .NET / C#
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+packages/
+*.nupkg
+
+
+# ============================================================
+# FRAMEWORKS Y HERRAMIENTAS DE BUILD
+# ============================================================
+
+## React / Vue / Angular / Next.js
+.next/
+.nuxt/
+out/
+dist/
+build/
+
+## Vite
+dist/
+dist-ssr/
+
+## Webpack / Parcel
+.cache/
+.parcel-cache/
+
+## Gradle / Maven
+.gradle/
+build/
+
+## Docker
+*.env.local     # variables de entorno locales
+
+
+# ============================================================
+# VARIABLES DE ENTORNO Y SECRETOS
+# ============================================================
+
+.env
+.env.*
+!.env.example    # sí versionar el archivo de ejemplo
+*.pem
+*.key
+*.p12
+secrets/
+credentials.json
+
+
+# ============================================================
+# LOGS Y TEMPORALES
+# ============================================================
+
+logs/
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+*.cache
+
+
+# ============================================================
+# BASES DE DATOS LOCALES
+# ============================================================
+
+*.sqlite
+*.sqlite3
+*.db
+*.sql       # cuidado: omitir si no quieres versionar migraciones
+
+
+# ============================================================
+# ARCHIVOS GENERADOS / COMPILADOS
+# ============================================================
+
+*.min.js
+*.min.css
+*.map        # source maps (opcional, según el proyecto)
+coverage/
+.nyc_output/
+
+
+# ============================================================
+# DEPENDENCIAS Y PAQUETES
+# ============================================================
+
+jspm_packages/
+bower_components/
+
+
+# ============================================================
+# CI / CD Y CONFIGURACIÓN LOCAL
+# ============================================================
+
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.terraform/
+*.tfstate
+*.tfstate.backup
