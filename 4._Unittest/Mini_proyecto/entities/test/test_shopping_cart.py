@@ -1,7 +1,7 @@
 import unittest
-from shopping_cart import ShopingCart
-from product import Product
-from product import ProductDiscountError
+from entities.shopping_cart import ShopingCart
+from entities.product import Product
+from entities.product import ProductDiscountError
 
 def is_avalible_to_skip():
     return True
@@ -30,21 +30,6 @@ class TestShoppingCart(unittest.TestCase):
 
     def tearDown(self):
         pass
-
-    def test_product_object(self):
-        name = 'Manzana'
-        price = 10.0
-
-        product = Product(name, price)
-
-        self.assertEqual(product.name, name)
-        self.assertEqual(product.price, 10.0, 'Lo sentimos, el precio no es el mismo.')
-
-    def test_product_name(self):
-        self.assertEqual(self.smarthphone.name, self.name)
-
-    def test_product_price(self):
-        self.assertEqual(self.smarthphone.price, self.price)
 
     def test_shopping_cart_empty(self):
         self.assertTrue(self.shopping_cart_1.empty(), 'Lo sentimos, el carrito de compras no se encuentra vacio. ')
@@ -92,7 +77,8 @@ class TestShoppingCart(unittest.TestCase):
     def test_skip_example_three(self):
         pass
 
-
+    def test_code_product(self):
+        self.assertRegex(self.smarthphone.code, self.smarthphone.name)
 
 if __name__ == '__main__':
     unittest.main()

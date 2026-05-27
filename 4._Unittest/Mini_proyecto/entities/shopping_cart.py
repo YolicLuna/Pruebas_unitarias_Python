@@ -1,4 +1,4 @@
-from product import Product
+from entities.product import Product
 
 class ShopingCart:
     

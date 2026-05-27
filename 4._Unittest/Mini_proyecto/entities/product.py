@@ -12,3 +12,7 @@ class Product:
             raise ProductDiscountError('Lo sentimos el descuento no puede ser mayor al precio.')
 
         self.discount = discount
+
+    @property
+    def code(self):
+        return f'code-{self.name}'
