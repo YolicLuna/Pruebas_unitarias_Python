@@ -1,6 +1,13 @@
 import unittest
 from shopping_cart import ShopingCart
 from product import Product
+from product import ProductDiscountError
+
+def is_avalible_to_skip():
+    return True
+
+def is_conect():
+    return False
 
 class TestShoppingCart(unittest.TestCase):
 
@@ -45,6 +52,47 @@ class TestShoppingCart(unittest.TestCase):
     def test_shopping_cart_has_product(self):
         self.assertTrue(self.shopping_cart_2.has_products())
         self.assertFalse(self.shopping_cart_2.empty())
+
+    def test_product_in_shopping_cart(self):
+
+        product = Product('Nuevo producto', 10)
+        self.shopping_cart_2.add_product(product)
+
+        self.assertIn(product, self.shopping_cart_2.products)
+        self.assertIn(self.smarthphone, self.shopping_cart_2.products)
+
+    def test_product_not_in_shopping_cart(self):
+        self.shopping_cart_2.remove_product(self.smarthphone)
+        self.assertNotIn(self.smarthphone, self.shopping_cart_2.products)
+
+    def test_discount_error(self):
+        with self.assertRaises(ProductDiscountError):
+            Product(name = 'Laptop', price = 10.0, discount = 11.0)
+
+    def test_total_shopping_cart(self):
+        self.shopping_cart_1.add_product(Product(name='Book', price=15.0))
+        self.shopping_cart_1.add_product(Product(name='Camara', price=700.0, discount=70.0))
+
+        self.assertGreater(self.shopping_cart_1.total, 0)
+        self.assertLess(self.shopping_cart_1.total, 1000)
+        self.assertEqual(self.shopping_cart_1.total, 645.0)
+
+    def test_total_empty_shopping_cart(self):
+        self.assertEqual(self.shopping_cart_1.total, 0)
+    
+    @unittest.skip('La prueba no cumple con los requerimientos.')
+    def tets_skip_example(self):
+        self.assertEqual(1, 1)
+
+    @unittest.skipIf(is_avalible_to_skip(), 'No se encuetra con todos los requerimientos.')
+    def test_skip_example_two(self):
+        pass
+
+    @unittest.skipUnless(is_conect(), 'No se encuetra con todos los requerimientos.')
+    def test_skip_example_three(self):
+        pass
+
+
 
 if __name__ == '__main__':
     unittest.main()
