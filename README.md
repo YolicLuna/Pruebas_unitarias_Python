@@ -1,6 +1,6 @@
 # ¿Qué son la pruebas unitarias?
 
-Laspruebas unitarias son pruebas automatizadas que tienen como objetivo verificar el funcionamiento de una unidad de codigo. 
+La spruebas unitarias son pruebas automatizadas que tienen como objetivo verificar el funcionamiento de una unidad de codigo. 
 La unidad podría definirse como una parte muy pequeña de una aplicación o programa, puede ser una rituna, una funcion, un metodo, etc.
 
 ## Ventajas
